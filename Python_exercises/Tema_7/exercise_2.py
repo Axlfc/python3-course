@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import time
 
 # Obtenemos la hora actual del sistema y la guardamos en la variable 'hora'

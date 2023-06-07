@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 class Vehiculo:
     def __init__(self, color, ruedas, puertas):

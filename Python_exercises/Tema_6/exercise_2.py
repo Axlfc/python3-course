@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 class Alumno:
     def inicializar(self, nombre, nota):
