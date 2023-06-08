@@ -1,7 +1,6 @@
-import urllib.request
+import requests
 from dotenv import load_dotenv
 import os
-import json
 
 
 def obtener_informacion_climatica(ciudad, codigo_pais, api_key, lang):
@@ -10,15 +9,14 @@ def obtener_informacion_climatica(ciudad, codigo_pais, api_key, lang):
         country_code = codigo_pais.strip().lower().replace(' ', '%20')
         url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name},{country_code}&appid={api_key}&lang={lang}'
 
-        with urllib.request.urlopen(url) as response:
-            data = json.loads(response.read().decode())
+        response = requests.get(url)
 
-            if data["cod"] == 200:
-                return data
-            else:
-                print("Error al obtener la información climática:", data["message"])
-                return None
-    except urllib.error.URLError as e:
+        if response.status_code == 200:
+            return response.json()
+        else:
+            print("Error al obtener la información climática:", response.json()["message"])
+            return None
+    except requests.exceptions.RequestException as e:
         print("Error al hacer la solicitud:", e)
         return None
     except KeyError:
