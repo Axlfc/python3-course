@@ -1,5 +1,6 @@
 import random
 import string
+import sys
 
 
 def gen_pass(length):
@@ -8,4 +9,10 @@ def gen_pass(length):
 
 
 if __name__ == '__main__':
-    print(gen_pass(16))
+    if len(sys.argv) == 2:
+        try:
+            print(gen_pass(int(sys.argv[1])))
+        except Exception as e:
+            print("ERROR:\t" + e + "\nEnter the number of character for the password")
+    else:
+        print(gen_pass(16))
