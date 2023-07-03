@@ -15,4 +15,4 @@ if __name__ == '__main__':
         except Exception as e:
             print("ERROR:\t" + e + "\nEnter the number of character for the password")
     else:
-        print(gen_pass(16))
+        print(gen_pass(random.randint(12, 16)))
