@@ -6,16 +6,38 @@ This tutorial will guide you through the process of creating a "Hello World" vie
 
 Before starting, ensure that you have the following:
 
-- [Python installed on your system](https://github.com/Axlfc/python3-course/blob/master/README.md)
-- [Django framework installed](https://github.com/Axlfc/python3-course/blob/master/Django_exercises/README.md)
+- **Windows:**
+  - [Python installed on your system](https://github.com/Axlfc/python3-course/tree/master#windows-installation)
+  - [Django framework installed](https://github.com/Axlfc/python3-course/tree/master/Django_exercises#windows-installation)
+
+- **GNU/Linux (Ubuntu):**
+  - Python installed on your system:
+    ```shell
+    sudo apt update
+    sudo apt install python3
+    ```
+  - Django framework installed:
+    ```shell
+    sudo apt install python3-django
+    ```
+
+- **macOS:**
+  - [Python installed on your system](https://github.com/Axlfc/python3-course/tree/master#macos-installation)
+  - [Django framework installed](https://github.com/Axlfc/python3-course/tree/master/Django_exercises#macos-installation)
 
 ## Steps
 
-1. **Create a new Django project:** Open your terminal and navigate to the desired location for your project. Run the following command to create a new Django project named `helloworld`:
+1. **Create a new Django project:**
 
-   ```shell
-   django-admin startproject helloworld
-   ```
+   - **Windows:** Open your command prompt and navigate to the desired location for your project. Run the following command to create a new Django project named `helloworld`:
+     ```shell
+     django-admin startproject helloworld
+     ```
+
+   - **GNU/Linux (Ubuntu) and macOS:** Open your terminal and navigate to the desired location for your project. Run the following command to create a new Django project named `helloworld`:
+     ```shell
+     django-admin startproject helloworld
+     ```
 
 2. **Navigate to the project directory:** Change to the project directory using the following command:
 
@@ -65,6 +87,8 @@ Congratulations! You have successfully created a "Hello World" view in your Djan
 
 ## Conclusion
 
-In this tutorial, you learned how to create a simple "Hello World" view in a Django app. This involved creating a view function, mapping it to a URL, and running the development server to access the view in a web browser. Feel free to explore Django further and build upon this foundation to create more complex web applications.
+In this tutorial, you learned how to create a simple "Hello World" view in a Django app. This involved creating a view function, mapping it to a URL, and running the development server to access the view in a
+
+ web browser. Feel free to explore Django further and build upon this foundation to create more complex web applications.
 
 For more information and detailed documentation, visit the [Django documentation](https://docs.djangoproject.com/).
