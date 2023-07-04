@@ -1,2 +1,0 @@
-https://www.makeuseof.com/django-flutter-integrating-backend-frontend-effortless-app-development/
-
