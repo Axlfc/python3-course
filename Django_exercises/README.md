@@ -178,7 +178,7 @@ Here are some common Django commands used in Django development:
 - `python3 manage.py compilemessages`: Compiles the translation files (.po) into binary format (.mo) for use in your Django application.
 
 - `python manage.py help`: For general help.
-- 
+
 - `python manage.py command_name -h`: For command-specific help.
 
 ## Additional Resources
