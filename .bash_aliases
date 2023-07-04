@@ -6,7 +6,7 @@ alias createsuperuser='python3 manage.py createsuperuser'
 startproject() {
     if ! command -v django-admin &> /dev/null; then
         echo "Error: 'django-admin' command not found. Make sure Django is installed:"
-		echo "pip3 install django"
+        echo "pip3 install django"
         return 1
     fi
 
@@ -23,6 +23,22 @@ startproject() {
     fi
 
     django-admin startproject "$project_name" "$target_dir"
+    (
+        cd "$project_name"
+        if [ ! -f "views.py" ]; then
+            echo "#!/usr/bin/env python3
+# -*- coding: utf-8 -*-" > "views.py"
+        fi
+
+        # Add import views to urls.py
+        urls_file="urls.py"
+        import_line="from . import views"
+        if [ -f "$urls_file" ]; then
+            if ! grep -q "$import_line" "$urls_file"; then
+                sed -i "1i $import_line" "$urls_file"
+            fi
+        fi
+    )
 }
 
 startapp() {
