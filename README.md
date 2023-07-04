@@ -1,5 +1,3 @@
-# python3-course
-
 # Python 3 Installation Guide
 
 This guide provides instructions on how to install Python 3 on different operating systems: Windows, GNU/Linux (Ubuntu), and macOS.
@@ -12,7 +10,8 @@ This guide provides instructions on how to install Python 3 on different operati
 4. [Verifying the Installation](#verifying-the-installation)
 5. [Updating Python](#updating-python)
 6. [Uninstalling Python](#uninstalling-python)
-7. [Additional Resources](#additional-resources)
+7. [Adding Python 3 and pip to PATH](#adding-python-3-and-pip-to-path)
+8. [Additional Resources](#additional-resources)
 
 ## Windows Installation
 
@@ -79,6 +78,43 @@ To uninstall Python from your system, follow these steps:
    sudo apt remove python3
    ```
 3. macOS: Locate the Python installation in the **Applications** folder and move it to the trash.
+
+## Adding Python 3 and pip to PATH
+
+To ensure that Python 3 and pip are added to the system's PATH variable, follow the instructions below:
+
+### Windows
+
+1. Press `Win + X` and select **"System"** from the context menu.
+2. Click on **"Advanced system settings"** in the left sidebar.
+3. In the **System Properties** window, click on the **"Environment Variables"** button.
+4. Under the **"System variables"** section, find the **"Path"** variable and click **"Edit"**.
+5. Click on **"New"** and add the path to your Python installation directory. It is typically `C:\Python3x` (where `x` represents the specific Python version).
+6. Click **"OK"** to save the changes.
+
+### GNU/Linux (Ubuntu) and macOS
+
+1. Open a terminal.
+2. Open the `.bashrc` or `.bash_profile` file in a text editor. For example, run the following command:
+   ```
+   nano ~/.bashrc
+   ```
+3. Add the following line at the end of the file:
+   ```
+   export PATH="$PATH:/path/to/python3/bin"
+   ```
+   Replace `/path/to/python3/bin` with the actual path to your Python 3 installation directory.
+4. Save the changes and exit the text editor.
+5. Run the following command to refresh the environment variables:
+   ```
+   source ~/.bashrc
+   ```
+   or
+   ```
+   source ~/.bash_profile
+   ```
+
+Now Python 3 and pip should be accessible from the command line. To verify, open a new terminal window and type `python3` or `pip3`, respectively.
 
 ## Additional Resources
 
