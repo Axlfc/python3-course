@@ -8,13 +8,21 @@
     <h1>Hello, {{name_tag}}!</h1>
     <h3>Categories:</h3>
     <ul>
+        <!-- HTML Commentary (shown in inspector) -->
+        {# One line comment #}
+        {% comment %}
+            This is a multi-line comment.
+            We iterate through categories and print them.
+            If the category is 'code' we print it bold and uppercase.
+        {% endcomment %}
         {% for category in categories %}
             {% if category == 'code' %}
-                <li><b>{{category}}</b></li>
+                <li><b>{{ category|upper }}</b></li>
             {% else %}
-                <li>{{category}}</li>
+                <li>{{ category }}</li>
             {% endif %}
         {% endfor %}
+        <h5>Total of categories: {{ categories|length }}</h5>
     </ul>
 </body>
 </html>
