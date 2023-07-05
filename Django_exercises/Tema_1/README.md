@@ -59,6 +59,8 @@ Before starting, ensure that you have the following:
    def greet(request):
        return HttpResponse("Hello, World!")
    ```
+   
+Make sure to include the `request` parameter in the greet method to access the incoming request.
 
 5. **Create a URL mapping:** Open the `helloworld/urls.py` file in a text editor and add the following code to map the `greet` view to a URL:
 
